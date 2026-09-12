@@ -1,2 +1,6 @@
-{:ok, message} = {:ok, "File saved successfully"}
-IO.puts(message)
+response = {:error, "Network timeout"}
+
+case response do
+  {:ok, message} -> IO.puts("Success: #{message}")
+  {:error, reason} -> IO.puts("Failed: #{reason}")
+end
